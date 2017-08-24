@@ -88,8 +88,10 @@ LogViewer
 @endsection
 
 @section('js')
-<script>
-var laravelLogViewerURL = '{{ $data_url }}';
-</script>
-<script type="text/javascript" src="{{ asset('assets/scripts/logviewer.js') }}"></script>
+    @if($logs)
+        <script>
+            var laravelLogViewerURL = '{{ $data_url }}';
+        </script>
+        <script type="text/javascript" src="{{ asset('assets/scripts/logviewer.js') }}"></script>
+    @endif
 @endsection
